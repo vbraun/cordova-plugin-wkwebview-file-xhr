@@ -647,7 +647,7 @@
     reqContext.dispatchProgressEvent("progress", respSize);
     reqContext.dispatchReadyStateChangeEvent(4); //DONE
 
-    if (payload.response.statusCode === 0 || payload.response.statusCode >= 400)
+    if (payload.response.statusCode === 0)
       reqContext.dispatchProgressEvent("error", respSize);
     else
       reqContext.dispatchProgressEvent("load", respSize);
